@@ -1,1 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/portfolio/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/portfolio/logo192.png"/><link rel="manifest" href="/portfolio/manifest.json"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><title>React App</title><script defer="defer" src="/portfolio/static/js/main.e74d6677.js"></script><link href="/portfolio/static/css/main.dff14f9b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Juliusz Łosiński - ML researcher UMG</title>
+	<link rel="stylesheet" href="main.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script type="module" src="/main.js"></script>
+    <style>
+        body {
+            margin-top: 56px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .card {
+            width: 50%;
+            height: calc(100vh - 56px); 
+            float: left;
+        }
+
+        #left-panel {
+            background-image: url("background.jpg");
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover; 
+        }
+
+        /* Styling to make image and text align side by side */
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .about-content img {
+            width: 30%; /* Set desired width of the image */
+            height: auto;
+            margin-right: 15px; /* Space between image and text */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="card">
+        <div class="card-body" id="left-panel">
+            <h5 class="card-title"><b>About me:</b></h5>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Profile picture of Juliusz Łosiński">
+                <p class="card-text">
+                    My name is <b>Juliusz Łosiński</b> and I hold a Master’s degree in Teleinformatics Systems and a Bachelor’s degree in Computer Science. Currently, I work as a <b>Machine Learning Research and Teaching Assistant</b> at Gdynia Maritime University within the Department of Applied Computer Science and Artificial Intelligence. I specialize in <b style="color:#3944bc;">computer vision</b> problems, including tasks such as classification, detection, segmentation, and reconstruction. My passion lies in Artificial Intelligence, particularly in the subfields of machine learning and deep learning. Additionally, I am currently working on a <b>PhD thesis</b> related to these vision problems.
+                    <br><br>
+                    In the past, I focused on rendering computer graphics using various 3D APIs like D3D12 and OpenGL. This experience has equipped me with valuable skills that enhance my understanding of both computer vision and computer architecture.
+                    <br><br>
+                    Machine Learning projects: <a href="https://github.com/juliuszlosinski/MachineLearning-Projects">Machine/Deep learning projects</a>
+                    <br><br>
+                    Bachelor thesis project: <a href="https://github.com/juliuszlosinski/GameEngine_RealX">RealX Engine</a>
+                    <br><br>
+                    Master thesis project: <a href="https://github.com/juliuszlosinski/RealX-Renderer">RealX Renderer</a>
+                </p>
+            </div>
+                   </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top">
+        <div class="card-body" id="right-panel">
+            <div id="threejs-container"></div>
+        </div>
+    </div>
+</body>
+</html>
