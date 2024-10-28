@@ -28,7 +28,7 @@ scene.add(directionalLight);
 
 // 6. Loading the GLTF model.
 const loader = new GLTFLoader();
-const pathToModel = "./assets/scene.gltf"; // Ensure this path is correct
+const pathToModel = "./public/scene.gltf"; // Ensure this path is correct
 let brainModel = null;
 
 loader.load(
