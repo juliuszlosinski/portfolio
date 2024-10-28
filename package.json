@@ -1,8 +1,16 @@
 {
-  "dependencies": {
-    "three": "^0.169.0"
+  "name": "cubesandplanes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
-  "devDependencies": {
-    "vite": "^5.4.10"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "three": "^0.160.0"
   }
 }
