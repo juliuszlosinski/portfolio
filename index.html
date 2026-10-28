@@ -1,89 +1,460 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pl">
 <head>
-	<meta charset="utf-8">
-	<title>Juliusz Łosiński - ML researcher UMG</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script type="module" src="./main.js"></script>
-    <style>
-        body {
-            margin-top: 56px;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        .card {
-            width: 50%;
-            height: calc(100vh - 56px); 
-            float: left;
-        }
-
-        #left-panel {
-            background-image: url("./public/background.jpg");
-            background: url('./public/background.jpg') no-repeat center center fixed;
-            background-size: cover; 
-        }
-
-        /* Styling to make image and text align side by side */
-        .about-content {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .about-content img {
-            width: 30%; /* Set desired width of the image */
-            height: auto;
-            margin-right: 15px; /* Space between image and text */
-            border-radius: 10px; /* Optional: rounded corners */
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Juliusz Łosiński · AI Engineer, Computer Vision</title>
+  <meta name="description" content="Juliusz Łosiński: inżynier AI i badacz computer vision na Uniwersytecie Morskim w Gdyni. Detekcja obiektów, YOLO, modele językowe i agenci AI.">
+  <meta name="theme-color" content="#050E1F">
+  <link rel="icon" href="public/jl.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://juliuszlosinski.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Juliusz Łosiński · ML Researcher i AI Engineer">
+  <meta property="og:description" content="Computer vision, modele językowe, RAG i agenci AI. Projekty, badania i ATLAS.">
+  <meta property="og:url" content="https://juliuszlosinski.com/">
+  <meta property="og:image" content="https://juliuszlosinski.com/public/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css?v=13">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Juliusz Łosiński</a>
+    <nav aria-label="Menu główne" data-en-aria="Main menu">
+      <ul id="menu">
+        <li><a href="#obszary" data-en="Focus">Obszary</a></li>
+        <li><a href="#atlas">ATLAS</a></li>
+        <li><a href="#projekty" data-en="Projects">Projekty</a></li>
+        <li><a href="#badania" data-en="Research">Badania</a></li>
+        <li><a href="#droga" data-en="Experience">Doświadczenie</a></li>
+        <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
     </nav>
-    
-    <div class="card">
-        <div class="card-body" id="left-panel">
-            <h5 class="card-title"><b>About me:</b></h5>
-            <div class="about-content">
-                <img src="./public/profile.jpg" alt="Profile picture of Juliusz Łosiński">
-                <p class="card-text">
-                    My name is <b>Juliusz Łosiński</b> and I hold a Master’s degree in Teleinformatics Systems and a Bachelor’s degree in Computer Science. Currently, I work as a <b>Machine Learning Research and Teaching Assistant</b> at Gdynia Maritime University within the Department of Applied Computer Science and Artificial Intelligence. I specialize in <b style="color:#3944bc;">computer vision</b> problems, including tasks such as classification, detection, segmentation, and reconstruction. My passion lies in Artificial Intelligence, particularly in the subfields of machine learning and deep learning. Additionally, I am currently working on a <b>PhD thesis</b> related to these vision problems.
-                    <br><br>
-                    In the past, I focused on rendering computer graphics using various 3D APIs like D3D12 and OpenGL. This experience has equipped me with valuable skills that enhance my understanding of both computer vision and computer architecture.
-                    <br><br>
-                    Machine Learning projects: <a href="https://github.com/juliuszlosinski/MachineLearning-Projects">Machine/Deep learning projects</a>
-                    <br><br>
-                    Bachelor thesis project: <a href="https://github.com/juliuszlosinski/GameEngine_RealX">RealX Engine</a>
-                    <br><br>
-                    Master thesis project: <a href="https://github.com/juliuszlosinski/RealX-Renderer">RealX Renderer</a>
-                </p>
-            </div>
-                   </div>
+    <div class="nav-tools">
+      <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span></button>
     </div>
-    <div class="card">
-        <img class="card-img-top">
-        <div class="card-body" id="right-panel">
-            <div id="threejs-container"></div>
+  </div>
+</header>
+
+<canvas id="net" aria-hidden="true"></canvas>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="eyebrow">// AI Engineer · Computer Vision &amp; Multimodal AI</div>
+        <h1 data-en="I build systems that <span class=&quot;accent&quot;>see, read and act</span>">Buduję systemy, które <span class="accent">widzą, czytają i działają</span></h1>
+        <p class="lead" data-en="I am an AI engineer and computer vision researcher at Gdynia Maritime University. I specialise in deploying AI agents (Generative AI, Agentic AI). My PhD is on detecting International Code of Signals flags, with three peer-reviewed papers so far. Before that I wrote graphics software at Intel and AMD, and in ATLAS I build agents on top of language models.">Jestem inżynierem AI i badaczem computer vision na Uniwersytecie Morskim w Gdyni. Specjalizuję się we wdrażaniu agentów sztucznej inteligencji (Generative AI, Agentic AI).
+          W doktoracie zajmuję się detekcją flag Międzynarodowego Kodu Sygnałowego, z trzema recenzowanymi publikacjami. Wcześniej tworzyłem oprogramowanie graficzne w Intelu i AMD, a w projekcie ATLAS buduję agentów opartych na modelach językowych.</p>
+        <ul class="roles">
+          <li>Computer Vision</li><li>YOLO · PyTorch</li><li>LLM · RAG</li><li data-en="AI agents">Agenci AI</li><li>C/C++ · GPU</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="#projekty" data-en="See projects">Zobacz projekty</a>
+          <a class="btn ghost" href="#badania" data-en="Research">Badania</a>
+          <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
+          <a class="btn ghost" href="https://github.com/juliuszlosinski">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+            GitHub</a>
         </div>
+      </div>
+      <figure class="portrait">
+        <img src="public/portrait.jpg?v=2" alt="Juliusz Łosiński podczas wystąpienia na konferencji IEEE" width="800" height="800">
+        <figcaption class="badge"><span class="dot"></span><span><b data-en="Now building">Teraz buduję</b><span data-en="ATLAS Scholar: agentic RAG">ATLAS Scholar: agentowy RAG</span></span></figcaption>
+      </figure>
     </div>
+  </section>
+
+  <section id="obszary">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Focus">// Obszary</div>
+        <h2 data-en="From pixels and polygons to language agents">Od pikseli i wielokątów do agentów językowych</h2>
+        <p data-en="Three areas I have worked in, each building on the previous one.">Trzy obszary, w których pracowałem i pracuję. Każdy wyrósł z poprzedniego.</p>
+      </div>
+      <div class="areas">
+        <article class="card area reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <span class="now" data-en="PhD research">Doktorat</span>
+          <h3>Computer Vision</h3>
+          <p data-en="Object detection with YOLO, benchmarking CNN architectures and backbones, and learning from imbalanced data. Applied to maritime signal flags in my PhD.">Detekcja obiektów modelami YOLO, porów&shy;nywanie archi&shy;tektur CNN i back&shy;bone'ów oraz uczenie na nie&shy;zbalan&shy;sowanych danych. Zastosowane do morskich flag sygnałowych w moim doktoracie.</p>
+        </article>
+        <article class="card area reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V3"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/></svg></div>
+          <span class="now" data-en="Current project">Obecny projekt</span>
+          <h3 data-en="LLMs, RAG and agents">LLM, RAG i agenci</h3>
+          <p data-en="Local language models with Ollama, retrieval-augmented generation, LangGraph agents and evaluation. Built step by step in ATLAS.">Lokalne modele językowe przez Ollamę, RAG, agenci w LangGraph i ewaluacja odpowiedzi. Rozwijane krok po kroku w projekcie ATLAS.</p>
+        </article>
+        <article class="card area reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></div>
+          <span class="now" data-en="Intel · AMD">Intel · AMD</span>
+          <h3 data-en="Graphics and GPU">Grafika i GPU</h3>
+          <p data-en="Graphics software on DirectX at Intel, C/C++ at AMD, and my own engines on OpenGL and Direct3D 12. This is why I know how software actually runs on hardware.">Oprogramowanie graficzne w DirectX w Intelu, C/C++ w AMD oraz własne silniki w OpenGL i Direct3D 12. Stąd wiem, jak oprogramowanie naprawdę działa na sprzęcie.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="atlas">
+    <div class="wrap">
+      <div class="atlas reveal">
+        <img class="atlas-logo" src="public/atlas_icon.svg" alt="Logo ATLAS: cztery połączone roboty na siatce" width="340" height="340">
+        <div>
+          <div class="eyebrow">// Agents That Learn, Act &amp; Solve</div>
+          <h2 data-en="ATLAS: a portfolio of AI agents">ATLAS: portfolio agentów AI</h2>
+          <p class="lead" data-en="A series of projects that build working AI systems: language models, RAG, AI agents, multi-agent systems and multimodal models. Each one runs locally and comes with tests, diagrams and documentation.">Seria projektów realizujących działające systemy AI: modele językowe, RAG, agentów, systemy wieloagentowe i modele multimodalne.
+            Każdy działa lokalnie i ma testy, diagramy oraz dokumentację.</p>
+          <ul class="atlas-stats">
+            <li><b>01</b><span data-en="ATLAS Flashcards: ready">ATLAS Flashcards: gotowy</span></li>
+            <li><b>02</b><span data-en="ATLAS Scholar: in progress">ATLAS Scholar: w trakcie</span></li>
+            <li><b>+</b><span data-en="next projects on the way">kolejne projekty w drodze</span></li>
+          </ul>
+          <div class="cta">
+            <a class="btn primary" href="https://juliuszlosinski.github.io/ATLAS/" data-en="Open ATLAS">Otwórz ATLAS</a>
+            <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/mapa.html" data-en="Project map">Mapa projektów</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekty">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Projects">// Projekty</div>
+        <h2 data-en="Selected projects">Wybrane projekty</h2>
+        <p data-en="Code for every project is on GitHub.">Kod każdego projektu jest na GitHubie.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtruj projekty" data-en-aria="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true" data-en="All">Wszystkie</button>
+        <button type="button" data-filter="llm" aria-pressed="false" data-en="LLM and NLP">LLM i NLP</button>
+        <button type="button" data-filter="cv" aria-pressed="false">Computer Vision</button>
+        <button type="button" data-filter="ml" aria-pressed="false" data-en="Machine learning">Uczenie maszynowe</button>
+        <button type="button" data-filter="gfx" aria-pressed="false" data-en="3D graphics">Grafika 3D</button>
+        <button type="button" data-filter="other" aria-pressed="false" data-en="Other">Inne</button>
+      </div>
+      <div class="projects" id="projects">
+        <a class="card project reveal" data-cat="llm" href="https://juliuszlosinski.github.io/ATLAS/flashcards.html">
+          <div class="thumb dark"><img src="public/atlas_flashcards.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>ATLAS Flashcards</h3>
+            <p data-en="Turns notes, PDFs and Word documents into flashcards with a local Qwen 2.5 model served by Ollama. The same model scores every card (LLM-as-judge), and the Explain button answers from passages of your own material (RAG). Finished decks export to Anki.">Zamienia notatki, PDF-y i dokumenty Word w fiszki do nauki, generowane lokalnym modelem Qwen 2.5 przez Ollamę. Ten sam model ocenia każdą fiszkę (LLM-as-judge), a przycisk Wyjaśnij tłumaczy ją na podstawie fragmentów materiału (RAG). Gotowe talie trafiają do Anki.</p>
+            <ul class="tags"><li>LLM</li><li>RAG</li><li>Ollama</li><li>Pydantic</li><li>Streamlit</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/MachineLearning-Projects/tree/main/Supervised%20Learning/Classification/Video%20Describer%20-%20Image%20Detection%20YOLO">
+          <div class="thumb"><img src="public/video_describer.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>Video Describer</h3>
+            <p data-en="Runs a video frame by frame through a YOLO detector and writes a new video with boxes, labels and confidence for every detection. It also logs the object coordinates for each frame.">Przepuszcza film klatka po klatce przez detektor YOLO i zapisuje nowe wideo z ramkami, etykietami i pewnością każdego wykrycia. Dla każdej klatki wypisuje też współrzędne znalezionych obiektów.</p>
+            <ul class="tags"><li>YOLO</li><li>OpenCV</li><li>Python</li><li data-en="Object detection">Detekcja obiektów</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="ml" href="https://github.com/juliuszlosinski/MachineLearning-Projects">
+          <div class="thumb"><img src="public/ml_projects.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>Machine Learning Projects</h3>
+            <p data-en="A tour of machine learning in Jupyter notebooks: from NumPy and SciPy through supervised and unsupervised learning to neural networks in Keras and TensorFlow, NLP and reinforcement learning, ending with complete applications.">Przegląd uczenia maszynowego w notatnikach Jupyter: od NumPy i SciPy, przez uczenie nadzorowane i nienadzorowane, po sieci neuronowe w Keras i TensorFlow, NLP i uczenie ze wzmocnieniem. Na końcu gotowe aplikacje.</p>
+            <ul class="tags"><li>Python</li><li>Keras</li><li>TensorFlow</li><li>NLP</li><li>RL</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="ml" href="https://github.com/juliuszlosinski/Java_Projects">
+          <div class="thumb contain"><img src="public/genetic_algorithms.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3 data-en="Genetic algorithms">Algorytmy genetyczne</h3>
+            <p data-en="My own genetic and evolutionary algorithms in Java, written without libraries: encoding, selection, crossover and mutation, with plots of how the optimisation converges.">Własne implementacje algorytmów genetycznych i ewolucyjnych w Javie, bez bibliotek: kodowanie osobników, selekcja, krzyżowanie i mutacja, z wykresami przebiegu optymalizacji.</p>
+            <ul class="tags"><li>Java</li><li data-en="Evolutionary algorithms">Algorytmy ewolucyjne</li><li data-en="Optimisation">Optymalizacja</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="llm" href="https://github.com/juliuszlosinski/Dok-chat-miner/tree/master/evaluator">
+          <div class="thumb"><img src="public/summary_evaluation.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3 data-en="Summary evaluator">Ocena streszczeń</h3>
+            <p data-en="A model that scores a summary without a reference summary: the article and summary are encoded with BERT, and a neural network trained on human ratings of 2,500 summaries (CNN/DailyMail) returns a quality score. Part of Dok-chat-miner, which clusters and summarises articles from cisa.gov.">Model, który ocenia streszczenie bez streszczenia wzorcowego: artykuł i streszczenie są kodowane BERT-em, a sieć neuronowa wyuczona na ludzkich ocenach 2 500 streszczeń (CNN/DailyMail) zwraca wynik jakości. Część projektu Dok-chat-miner, który grupuje i streszcza artykuły z cisa.gov.</p>
+            <ul class="tags"><li>BERT</li><li>NLP</li><li>Python</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/drawventure">
+          <div class="thumb contain"><img src="public/drawventure.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>Drawventure</h3>
+            <p data-en="A team-built drawing game for kids: draw the given shape as fast and as precisely as you can. I built the AI backend: a CNN recognises shapes and digits, and a Flask API scores every drawing.">Zespołowa gra dla dzieci, w której trzeba jak najszybciej i najdokładniej narysować zadany kształt. Odpowiadałem za backend AI: sieć CNN rozpoznaje figury i cyfry, a API we Flasku ocenia każdy rysunek.</p>
+            <ul class="tags"><li>CNN</li><li>Keras</li><li>Flask</li><li>Firebase</li></ul>
+          </div>
+        </a>
+        <a class="card project feature reveal" data-cat="gfx" href="https://github.com/juliuszlosinski/GameEngine_RealX">
+          <div class="thumb"><img src="public/realx_engine.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>RealX Engine</h3>
+            <p data-en="A 3D game engine with a scene editor, built for my bachelor&#x27;s thesis. OpenGL rendering, PhysX physics and collisions, irrKlang audio and an ImGui editor interface, all written in C++.">Silnik gier 3D z edytorem sceny, zbudowany w ramach pracy inżynierskiej. Renderowanie w OpenGL, fizyka i kolizje w PhysX, dźwięk w irrKlang, a interfejs edytora w ImGui. Całość napisana w C++.</p>
+            <ul class="tags"><li>C++</li><li>OpenGL</li><li>PhysX</li><li>irrKlang</li><li>ImGui</li><li data-en="Bachelor&#x27;s thesis">Praca inżynierska</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="gfx" href="https://github.com/juliuszlosinski/HectorX-GameEngine-Cpp_OpenGL_PhysX">
+          <div class="thumb"><img src="public/hector_x.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>HectorX Engine</h3>
+            <p data-en="A game engine on modern OpenGL (GLFW, GLEW, GLM) with custom GLSL shaders and PhysX physics and collision simulation.">Silnik gier na nowoczesnym OpenGL (GLFW, GLEW, GLM) z własnymi shaderami GLSL oraz symulacją fizyki i kolizji w PhysX.</p>
+            <ul class="tags"><li>C++</li><li>OpenGL</li><li>GLSL</li><li>PhysX</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="other" href="https://github.com/juliuszlosinski/Game_Bobi_LibGDX_Android">
+          <div class="thumb contain"><img src="public/bobi.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3 data-en="Bobi: Android game">Bobi: gra na Androida</h3>
+            <p data-en="A 2D platformer for Android built with LibGDX. The repository includes an installable build and gameplay recordings.">Gra platformowa 2D na Androida napisana w LibGDX. W repozytorium jest gotowa aplikacja do zainstalowania i nagrania z rozgrywki.</p>
+            <ul class="tags"><li>Android</li><li>LibGDX</li><li data-en="2D game">Gra 2D</li></ul>
+          </div>
+        </a>
+        <a class="card project reveal" data-cat="other" href="https://github.com/juliuszlosinski/Courses_Certificates">
+          <div class="thumb"><img src="public/courses.png" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3 data-en="Courses and certificates">Kursy i certyfikaty</h3>
+            <p data-en="Certificates from completed online courses and specialisations, mostly on Coursera, including C and C++ programming.">Certyfikaty z ukończonych kursów i specjalizacji online, głównie z Coursery, m.in. z programowania w C i C++.</p>
+            <ul class="tags"><li>Coursera</li><li>C</li><li>C++</li></ul>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="badania">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Research">// Badania</div>
+        <h2 data-en="Detecting maritime signal flags">Detekcja morskich flag sygnałowych</h2>
+        <p data-en="My PhD at Gdynia Maritime University: a computer vision system that recognises International Code of Signals (INTERCO) flags. I built the whole experimental framework in Python and PyTorch, from dataset preparation and class balancing to training, tuning and automatic evaluation.">Doktorat na Uniwersytecie Morskim w Gdyni: system computer vision rozpoznający flagi Międzynarodowego Kodu Sygnałowego (INTERCO).
+          Cały framework eksperymentów zbudowałem w Pythonie i PyTorch, od przygotowania i balansowania danych po trening, strojenie i automatyczną ocenę modeli.</p>
+      </div>
+
+      <div class="research-hero card reveal">
+        <figure class="research-img">
+          <img src="public/interco_mosaic.jpg" alt="Batch treningowy YOLO z augmentacją mozaikową: flagi sygnałowe z ramkami i numerami klas" loading="lazy" width="524" height="547">
+          <figcaption data-en="YOLO training batch with mosaic augmentation.">Batch treningowy YOLO z augmentacją mozaikową.</figcaption>
+        </figure>
+        <div class="research-text">
+          <ul class="facts">
+            <li><b>26 000</b><span data-en="images of INTERCO flags">obrazów flag INTERCO</span></li>
+            <li><b>Tryton</b><span data-en="supercomputer, on a computing grant I obtained from TASK IT Centre">superkomputer, na grancie obliczeniowym, który uzyskałem w CI TASK</span></li>
+            <li><b>YOLOv8-v11</b><span data-en="detectors trained and compared">wytrenowane i porównane detektory</span></li>
+          </ul>
+          <div class="studies">
+            <article>
+              <h3 data-en="12 CNN classifiers compared">Porównanie 12 klasyfikatorów CNN</h3>
+              <p data-en="AlexNet, VGG, Inception, ResNet, CSPNet, MobileNetV2, EfficientNet and ConvNeXt compared on accuracy, precision, recall, F1, depth, and training and inference time.">AlexNet, VGG, Inception, ResNet, CSPNet, MobileNetV2, EfficientNet i ConvNeXt porównane pod względem accuracy, precision, recall, F1, głębokości oraz czasu treningu i wnioskowania.</p>
+            </article>
+            <article>
+              <h3 data-en="Imbalanced data in detection">Niezbalansowane dane w detekcji</h3>
+              <p data-en="Six ways to balance minority classes (SMOTE, ADASYN, augmentation, DCGAN, autoencoder and a baseline), each with YOLOv8, v9, v10 and v11, measured with mAP50 and mAP50-95.">Sześć metod balansowania klas mniejszościowych (SMOTE, ADASYN, augmentacja, DCGAN, autoenkoder i wariant bazowy), każda z YOLOv8, v9, v10 i v11, oceniane mAP50 i mAP50-95.</p>
+            </article>
+            <article>
+              <h3 data-en="New backbones for YOLOv8">Nowe backbone'y dla YOLOv8</h3>
+              <p data-en="Replacing the YOLOv8 backbone with selected CNN architectures to get a more efficient flag detector.">Zastąpienie backbone'u YOLOv8 wybranymi architekturami CNN, by uzyskać wydajniejszy detektor flag.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="pubs-title reveal" data-en="Publications">Publikacje</h3>
+      <ol class="pubs">
+        <li class="card reveal">
+          <span class="venue">KES 2026</span>
+          <div>
+            <h4>An Evaluation of Selected Backbone Architectures for YOLOv8 in the Detection of International Code of Signals Flags</h4>
+            <p>J. Łosiński, I. Czarnowski · Procedia Computer Science</p>
+          </div>
+        </li>
+        <li class="card reveal">
+          <span class="venue">ICCCI 2025</span>
+          <div>
+            <h4><a href="https://doi.org/10.1007/978-3-032-09321-9_33">Imbalanced Data Problem in INTERCO Detection</a></h4>
+            <p>J. Łosiński, I. Czarnowski · Lecture Notes in Computer Science (LNAI 16139), Springer, s. 480-494</p>
+          </div>
+        </li>
+        <li class="card reveal">
+          <span class="venue">KES 2025</span>
+          <div>
+            <h4><a href="https://doi.org/10.1016/j.procs.2025.09.206">Comparison of CNN Architectures for INTERCO</a></h4>
+            <p>J. Łosiński, I. Czarnowski · Procedia Computer Science, vol. 270, s. 861-870</p>
+          </div>
+        </li>
+      </ol>
+      <p class="pubs-note reveal" data-en="Also abstract papers at PP-RAI 2024 and PP-RAI 2025, the Polish Conference on Artificial Intelligence.">Do tego streszczenia na konferencjach PP-RAI 2024 i PP-RAI 2025 (Polska Konferencja Sztucznej Inteligencji).</p>
+    </div>
+  </section>
+
+  <section id="droga">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Experience">// Doświadczenie</div>
+        <h2 data-en="Work, education and projects">Praca, wykształcenie i projekty</h2>
+      </div>
+      <div class="timeline-grid">
+        <div>
+          <h3 class="col-title" data-en="Work">Praca</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="when" data-en="Oct 2024 - now">10.2024 - obecnie</span>
+              <h4 data-en="Research and Teaching Assistant">Asystent badawczo-dydaktyczny</h4>
+              <p class="org" data-en="Gdynia Maritime University · Faculty of Computer Science, Dept. of Artificial Intelligence">Uniwersytet Morski w Gdyni · Wydział Informatyki, Katedra Sztucznej Inteligencji</p>
+              <ul class="points">
+                <li data-en="Doctoral research in computer vision: automatic detection of International Code of Signals (INTERCO) flags.">Badania doktorskie z computer vision: automatyczna detekcja flag Międzynarodowego Kodu Sygnałowego (INTERCO).</li>
+                <li data-en="Dataset preparation, training and evaluation of detection models; benchmarking CNN architectures and YOLOv8 backbones; research on imbalanced data.">Przygotowanie danych, trening i ewaluacja modeli detekcji; porównanie architektur CNN i backbone'ów YOLOv8; badania nad niezbalansowanymi danymi.</li>
+                <li data-en="Results published at KES 2025, KES 2026 and ICCCI 2025 (Springer LNAI); abstract papers at PP-RAI 2024 and 2025.">Wyniki opublikowane na KES 2025, KES 2026 i ICCCI 2025 (Springer LNAI); streszczenia na PP-RAI 2024 i 2025.</li>
+                <li data-en="Teaching machine learning and artificial intelligence classes to computer science students.">Zajęcia z uczenia maszynowego i sztucznej inteligencji dla studentów informatyki.</li>
+              </ul>
+              <ul class="tags"><li>Computer Vision</li><li>YOLOv8</li><li>CNN</li><li>PyTorch</li><li>Python</li><li data-en="Research">Badania</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Apr 2026 - Sep 2026">04.2026 - 09.2026</span>
+              <h4>Python Developer (AI)</h4>
+              <p class="org" data-en="Gdańsk University of Technology · TASK IT Centre">Politechnika Gdańska · Centrum Informatyczne TASK</p>
+              <ul class="points">
+                <li data-en="AI software for anomaly detection in AIS vessel data, in an NCBR-funded R&amp;D project on the CAISE platform.">Oprogramowanie AI do wykrywania anomalii w danych AIS statków, w projekcie badawczo-rozwojowym NCBR na platformie CAISE.</li>
+                <li data-en="Built and ran Python components in a Kubernetes environment.">Budowa i uruchamianie komponentów w Pythonie w środowisku Kubernetes.</li>
+                <li data-en="Applied AI libraries and language models within the anomaly detection solution.">Zastosowanie bibliotek AI i modeli językowych w rozwiązaniu do wykrywania anomalii.</li>
+              </ul>
+              <ul class="tags"><li>Python</li><li>Kubernetes</li><li>LLM</li><li data-en="Anomaly detection">Wykrywanie anomalii</li><li data-en="AIS data">Dane AIS</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Oct 2025 - now">10.2025 - obecnie</span>
+              <h4 data-en="IT Specialist, Dean's Office (part-time)">Specjalista IT w dziekanacie (część etatu)</h4>
+              <p class="org" data-en="Gdynia Maritime University · Faculty of Computer Science">Uniwersytet Morski w Gdyni · Wydział Informatyki</p>
+              <ul class="points">
+                <li data-en="Deployed and configured Debian servers on Proxmox.">Wdrożenie i konfiguracja serwerów Debian na Proxmoksie.</li>
+                <li data-en="Implemented a Docker container management system.">Wdrożenie systemu zarządzania kontenerami Docker.</li>
+                <li data-en="Configured virtual machines and virtual environments.">Konfiguracja maszyn i środowisk wirtualnych.</li>
+              </ul>
+              <ul class="tags"><li>Proxmox</li><li>Docker</li><li>Debian</li><li data-en="Virtualization">Wirtualizacja</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Oct 2023 - Sep 2024">10.2023 - 09.2024</span>
+              <h4 data-en="Research and Teaching Assistant Intern">Stażysta: asystent badawczo-dydaktyczny</h4>
+              <p class="org" data-en="Gdynia Maritime University">Uniwersytet Morski w Gdyni</p>
+              <ul class="points">
+                <li data-en="Research and teaching in computer science.">Badania i dydaktyka z informatyki.</li>
+              </ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Sep 2023 - now">09.2023 - obecnie</span>
+              <h4 data-en="IT Administrator (contract)">Administrator IT (umowa)</h4>
+              <p class="org">GEMMI</p>
+              <ul class="points">
+                <li data-en="Administration of Microsoft Azure cloud, including virtual machines.">Administracja chmurą Microsoft Azure, w tym maszynami wirtualnymi.</li>
+                <li data-en="Management of Microsoft 365, corporate email and the company website.">Zarządzanie Microsoft 365, pocztą firmową i stroną internetową firmy.</li>
+                <li data-en="DevOps practices for deploying and maintaining secure IT systems.">Praktyki DevOps przy wdrażaniu i utrzymaniu bezpiecznych systemów IT.</li>
+              </ul>
+              <ul class="tags"><li>Microsoft Azure</li><li data-en="Virtual machines">Maszyny wirtualne</li><li>Microsoft 365</li><li>DevOps</li><li data-en="IT security">Bezpieczeństwo IT</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Jan 2023 - Jul 2024">01.2023 - 07.2024</span>
+              <h4 data-en="Graphics Software Development Intern">Stażysta: rozwój oprogramowania graficznego</h4>
+              <p class="org">Intel</p>
+              <ul class="points">
+                <li data-en="Graphics software based on the DirectX API within a large-scale engineering organisation.">Oprogramowanie graficzne oparte na API DirectX w dużej organizacji inżynierskiej.</li>
+              </ul>
+              <ul class="tags"><li>DirectX</li><li data-en="Graphics">Grafika</li><li>OpenGL</li><li>C/C++</li><li data-en="Hardware programming">Programowanie sprzętu</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Apr 2022 - Sep 2022">04.2022 - 09.2022</span>
+              <h4 data-en="Intern Software Developer (C/C++)">Stażysta: programista C/C++</h4>
+              <p class="org">AMD ODC · Luxoft</p>
+              <ul class="points">
+                <li data-en="C/C++ software for AMD, built in close collaboration with the AMD development team.">Oprogramowanie w C/C++ dla AMD, tworzone w ścisłej współpracy z zespołem AMD.</li>
+                <li data-en="Administered AMD infrastructure components.">Administracja komponentami infrastruktury AMD.</li>
+              </ul>
+              <ul class="tags"><li>C/C++</li><li data-en="Infrastructure">Infrastruktura</li><li>Linux</li><li>UML</li></ul>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="col-title" data-en="Education">Wykształcenie</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="when" data-en="In progress">W toku</span>
+              <h4 data-en="PhD in computer vision">Doktorat z computer vision</h4>
+              <p class="org" data-en="Gdynia Maritime University">Uniwersytet Morski w Gdyni</p>
+              <ul class="points">
+                <li data-en="Automatic detection of International Code of Signals (INTERCO) flags.">Automatyczna detekcja flag Międzynarodowego Kodu Sygnałowego (INTERCO).</li>
+              </ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Feb 2023 - Jul 2024">02.2023 - 07.2024</span>
+              <h4 data-en="Master's, Teleinformation Systems">Magister, Systemy teleinformatyczne</h4>
+              <p class="org" data-en="Gdynia Maritime University · Data Analysis and Processing">Uniwersytet Morski w Gdyni · Analiza i przetwarzanie danych</p>
+              <ul class="points">
+                <li data-en="Final grade 6.0 (highest).">Ocena końcowa 6,0 (najwyższa).</li>
+                <li data-en="Thesis: <a href=&quot;https://github.com/juliuszlosinski/RealX-Renderer&quot;>RealX Renderer</a> on Direct3D 12.">Praca: <a href="https://github.com/juliuszlosinski/RealX-Renderer">RealX Renderer</a> na Direct3D 12.</li>
+              </ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Oct 2019 - Feb 2023">10.2019 - 02.2023</span>
+              <h4 data-en="Bachelor of Engineering, Computer Science">Inżynier, Informatyka</h4>
+              <p class="org" data-en="Gdynia Maritime University · Web and Mobile Applications">Uniwersytet Morski w Gdyni · Aplikacje internetowe i mobilne</p>
+              <ul class="points">
+                <li data-en="Final grade 6.0 (highest).">Ocena końcowa 6,0 (najwyższa).</li>
+                <li data-en="Rector's scholarship for the best students three years in a row (2019/20, 2020/21, 2021/22).">Stypendium rektora dla najlepszych studentów trzy lata z rzędu (2019/20, 2020/21, 2021/22).</li>
+                <li data-en="Thesis: the RealX Engine game engine.">Praca: silnik gier RealX Engine.</li>
+              </ul>
+            </li>
+          </ol>
+          <h3 class="col-title" data-en="Projects and community">Projekty i społeczność</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="when">2026 - 2027</span>
+              <h4 data-en="Project manager: MOOC on AI and language models">Kierownik projektu: kurs MOOC o AI i modelach językowych</h4>
+              <p class="org" data-en="Gdynia Maritime University · Faculty of Computer Science · NAVOICA">Uniwersytet Morski w Gdyni · Wydział Informatyki · NAVOICA</p>
+              <ul class="points">
+                <li data-en="A 30-hour online course, Artificial Intelligence and Language Models in the Energy Transition, for the national NAVOICA platform, created with OPI PIB and funded by the Ministry of Science and Higher Education and the European Social Fund Plus.">Kurs online „Sztuczna inteligencja i modele językowe w transformacji energetycznej” (30 godzin) dla ogólnopolskiej platformy NAVOICA, tworzony z OPI PIB i finansowany przez MNiSW oraz Europejski Fundusz Społeczny Plus.</li>
+                <li data-en="I coordinate a team of four authors and develop the modules on language models (RNN, LSTM, GRU, transformers, BERT, GPT), AI programming in Python, PyTorch and TensorFlow, and practical LLM applications.">Koordynuję zespół czterech autorów i rozwijam moduły o modelach językowych (RNN, LSTM, GRU, transformery, BERT, GPT), programowaniu AI w Pythonie, PyTorch i TensorFlow oraz praktycznych zastosowaniach LLM.</li>
+              </ul>
+              <ul class="tags"><li data-en="Project management">Zarządzanie projektem</li><li>LLM</li><li data-en="Transformers">Transformery</li><li>BERT / GPT</li><li data-en="Chatbots">Chatboty</li><li data-en="EU funding">Fundusze UE</li></ul>
+            </li>
+            <li class="reveal">
+              <span class="when" data-en="Founder and supervisor">Założyciel i opiekun</span>
+              <h4 data-en="Neuron Student Research Club">Koło naukowe Neuron</h4>
+              <ul class="points">
+                <li data-en="The first student research club dedicated to AI at the Faculty of Computer Science, Gdynia Maritime University. I founded it and supervise its work, helping students develop their AI skills.">Pierwsze koło naukowe poświęcone sztucznej inteligencji na Wydziale Informatyki Uniwersytetu Morskiego w Gdyni. Założyłem je i prowadzę, wspierając studentów w rozwijaniu umiejętności z AI.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="eyebrow" data-en="// Contact">// Kontakt</div>
+        <h2 data-en="Let's talk about AI">Porozmawiajmy o AI</h2>
+        <p data-en="Open to projects and roles around computer vision, language models and AI agents.">Jestem otwarty na projekty i role związane z computer vision, modelami językowymi i agentami AI.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/juliuszlosinski">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/juliuszlosinski">GitHub</a>
+          <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Juliusz Łosiński</span>
+    <span>juliuszlosinski.com</span>
+  </div>
+</footer>
+
+<script src="site.js?v=4"></script>
 </body>
 </html>
