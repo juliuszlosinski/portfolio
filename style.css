@@ -1,5 +1,5 @@
 /* Juliusz Łosiński: personal site.
-   Layout: one page over a live neural-network canvas background, a hero, then focus areas, ATLAS, projects, path and contact.
+   Layout: one page over a live neural-network canvas background, a hero, then focus areas, ATLAS, projects, research, skills, courses, experience and contact.
    Deliberately single-theme: the same night-blue world as ATLAS, so atlas.juliuszlosinski.com feels like part of it. */
 :root {
   --bg: #050E1F;
@@ -154,7 +154,7 @@ section { padding: 64px 0; }
 }
 .filters button:hover { color: var(--text); }
 .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
-.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; grid-auto-flow: row dense; }
 .project { display: flex; flex-direction: column; overflow: hidden; text-decoration: none; color: var(--text); transition: transform .25s, border-color .25s, box-shadow .25s; }
 .project:hover { transform: translateY(-4px); border-color: var(--line-strong); box-shadow: 0 24px 50px rgba(0, 0, 0, .35); }
 .project .thumb { aspect-ratio: 16 / 9; background: #F4F7FB; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -165,17 +165,12 @@ section { padding: 64px 0; }
 .project .body { padding: 20px 22px 22px; display: grid; gap: 8px; flex: 1; align-content: start; }
 .project h3 { font-size: 18px; }
 .project p { color: var(--muted); font-size: 14.5px; }
-.project .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; padding: 0; list-style: none; }
-.project .tags li { font: 500 11.5px var(--font-mono); padding: 3px 8px; border-radius: 6px; background: rgba(59, 130, 246, .14); color: #BFD6F5; }
+/* tag chips, shared by projects, skills and the experience timeline */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { font: 500 11.5px var(--font-mono); padding: 3px 8px; border-radius: 6px; background: rgba(59, 130, 246, .14); color: #BFD6F5; }
+.project .tags { margin-top: 4px; }
+.project .status { font: 500 11.5px var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: #4ADE80; }
 .project[hidden] { display: none; }
-
-/* path */
-.path { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
-.step { padding: 24px; position: relative; }
-.step .when { font: 500 12px var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--cyan); }
-.step h3 { font-size: 17.5px; margin: 10px 0 8px; }
-.step p { color: var(--muted); font-size: 14.5px; }
-.step a { font-size: 14.5px; }
 
 /* contact */
 .contact { text-align: center; padding: 56px 32px; border-radius: 28px; border: 1px solid var(--line-strong);
@@ -194,7 +189,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 /* ---------- responsive ---------- */
 @media (max-width: 980px) {
   .areas, .projects { grid-template-columns: repeat(2, 1fr); }
-  .path { grid-template-columns: repeat(2, 1fr); }
   .atlas { grid-template-columns: 1fr; padding: 28px; }
   .atlas-logo { max-width: 240px; }
 }
@@ -214,7 +208,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 }
 @media (max-width: 600px) {
   section { padding: 48px 0; }
-  .areas, .projects, .path { grid-template-columns: 1fr; }
+  .areas, .projects { grid-template-columns: 1fr; }
   .contact { padding: 40px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -236,6 +230,27 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   .project.feature h3 { font-size: 20px; }
 }
 
+
+/* ---------- skills ---------- */
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skill { padding: 24px; display: grid; gap: 14px; align-content: start; }
+.skill h3 { font-size: 17px; }
+.skill .tags li { font-size: 12px; padding: 4px 9px; }
+@media (max-width: 980px) { .skills { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .skills { grid-template-columns: 1fr; } }
+
+/* ---------- courses ---------- */
+.courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+.course { padding: 24px; display: grid; gap: 14px; }
+.course h3 { font-size: 17px; }
+.course-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.course-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.course-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.course-list a { color: var(--text); text-decoration: none; font-size: 14.5px; line-height: 1.45; }
+.course-list a:hover { color: var(--cyan); }
+.course-list .when { flex: none; font: 500 12px var(--font-mono); color: var(--muted); }
+@media (max-width: 980px) { .courses { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .courses { grid-template-columns: 1fr; } }
 
 /* ---------- research ---------- */
 .research-hero { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; padding: 28px; align-items: start; }
@@ -277,8 +292,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 .timeline p { color: var(--muted); font-size: 14.5px; }
 .timeline .points { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 4px; color: var(--muted); font-size: 14.5px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .timeline .points li::marker { color: var(--cyan); }
-.timeline .tags { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.timeline .tags li { font: 500 11.5px var(--font-mono); padding: 3px 8px; border-radius: 6px; background: rgba(59, 130, 246, .14); color: #BFD6F5; }
+.timeline .tags { margin-top: 10px; }
 
 @media (max-width: 980px) {
   .research-hero { grid-template-columns: 1fr; }

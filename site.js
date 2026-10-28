@@ -31,9 +31,11 @@
     document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
 
     // safety net: anything in or above the viewport is shown even if the observer stays silent
-    const sweep = () => document.querySelectorAll(".reveal:not(.in)").forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("in");
-    });
+    const sweep = () => {
+      const left = document.querySelectorAll(".reveal:not(.in)");
+      left.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("in"); });
+      if (!left.length) window.removeEventListener("scroll", sweep);
+    };
     window.addEventListener("scroll", sweep, { passive: true });
     window.addEventListener("load", sweep);
     setTimeout(sweep, 600);
@@ -55,8 +57,8 @@
   /* ---------- language: Polish in the markup, English in data-en ---------- */
   const META = {
     pl: { title: document.title, desc: document.querySelector('meta[name="description"]').content },
-    en: { title: "Juliusz Łosiński · ML Researcher and AI Engineer",
-          desc: "Juliusz Łosiński: machine learning researcher at Gdynia Maritime University. Computer vision, language models, RAG and AI agents." }
+    en: { title: "Juliusz Łosiński · AI Engineer, Computer Vision",
+          desc: "Juliusz Łosiński: AI engineer and computer vision researcher at Gdynia Maritime University. Object detection, YOLO, language models and AI agents." }
   };
   const langBtn = document.getElementById("lang");
   function setLang(lang) {

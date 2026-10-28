@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=18">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -33,6 +33,7 @@
         <li><a href="#atlas">ATLAS</a></li>
         <li><a href="#projekty" data-en="Projects">Projekty</a></li>
         <li><a href="#badania" data-en="Research">Badania</a></li>
+        <li><a href="#umiejetnosci" data-en="Skills">Umiejętności</a></li>
         <li><a href="#droga" data-en="Experience">Doświadczenie</a></li>
         <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
       </ul>
@@ -55,10 +56,12 @@
         <p class="lead" data-en="I am an AI engineer and computer vision researcher at Gdynia Maritime University. I specialise in deploying AI agents (Generative AI, Agentic AI). My PhD is on detecting International Code of Signals flags, with three peer-reviewed papers so far. Before that I wrote graphics software at Intel and AMD, and in ATLAS I build agents on top of language models.">Jestem inżynierem AI i badaczem computer vision na Uniwersytecie Morskim w Gdyni. Specjalizuję się we wdrażaniu agentów sztucznej inteligencji (Generative AI, Agentic AI).
           W doktoracie zajmuję się detekcją flag Międzynarodowego Kodu Sygnałowego, z trzema recenzowanymi publikacjami. Wcześniej tworzyłem oprogramowanie graficzne w Intelu i AMD, a w projekcie ATLAS buduję agentów opartych na modelach językowych.</p>
         <ul class="roles">
-          <li>Computer Vision</li><li>YOLO · PyTorch</li><li>LLM · RAG</li><li data-en="AI agents">Agenci AI</li><li>C/C++ · GPU</li>
+          <li>Computer Vision</li><li>YOLO · PyTorch</li><li>LLM · RAG</li><li>Agentic AI · GenAI</li><li>C/C++ · GPU</li>
         </ul>
         <div class="cta">
           <a class="btn primary" href="#projekty" data-en="See projects">Zobacz projekty</a>
+          <a class="btn ghost" href="public/Juliusz_Losinski_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            <span data-en="Download CV">Pobierz CV</span></a>
           <a class="btn ghost" href="#badania" data-en="Research">Badania</a>
           <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
           <a class="btn ghost" href="https://github.com/juliuszlosinski">
@@ -144,15 +147,24 @@
       </div>
       <div class="projects" id="projects">
         <a class="card project reveal" data-cat="llm" href="https://juliuszlosinski.github.io/ATLAS/flashcards.html">
-          <div class="thumb dark"><img src="public/atlas_flashcards.png" alt="" loading="lazy"></div>
+          <div class="thumb dark"><img src="public/atlas_flashcards.webp" alt="" loading="lazy"></div>
           <div class="body">
-            <h3>ATLAS Flashcards</h3>
+            <h3>ATLAS: Flashcards</h3>
             <p data-en="Turns notes, PDFs and Word documents into flashcards with a local Qwen 2.5 model served by Ollama. The same model scores every card (LLM-as-judge), and the Explain button answers from passages of your own material (RAG). Finished decks export to Anki.">Zamienia notatki, PDF-y i dokumenty Word w fiszki do nauki, generowane lokalnym modelem Qwen 2.5 przez Ollamę. Ten sam model ocenia każdą fiszkę (LLM-as-judge), a przycisk Wyjaśnij tłumaczy ją na podstawie fragmentów materiału (RAG). Gotowe talie trafiają do Anki.</p>
             <ul class="tags"><li>LLM</li><li>RAG</li><li>Ollama</li><li>Pydantic</li><li>Streamlit</li></ul>
           </div>
         </a>
+        <a class="card project reveal" data-cat="llm" href="https://juliuszlosinski.github.io/ATLAS/mapa.html">
+          <div class="thumb contain"><img src="public/atlas_scholar_graph.svg" alt="" loading="lazy"></div>
+          <div class="body">
+            <span class="status" data-en="In progress">W trakcie</span>
+            <h3>ATLAS: Scholar</h3>
+            <p data-en="Agentic RAG over scientific PDFs. A LangGraph agent retrieves passages with hybrid search (BM25 and vectors in Qdrant, merged with RRF), grades whether they are enough, rewrites the question and searches again if not, and answers with page citations, or says plainly that the documents do not contain the answer. Evaluated with RAGAS against a plain RAG baseline.">Agentowy RAG po publikacjach w PDF. Agent w LangGraph wyszukuje fragmenty hybrydowo (BM25 i wektory w Qdrant, łączone metodą RRF), ocenia, czy wystarczą, w razie potrzeby przepisuje pytanie i szuka ponownie, a odpowiada z cytatami i numerem strony albo wprost mówi, że odpowiedzi w dokumentach nie ma. Ewaluacja RAGAS względem zwykłego RAG.</p>
+            <ul class="tags"><li>LangGraph</li><li data-en="Agentic RAG">Agentowy RAG</li><li>Qdrant</li><li>BM25</li><li>bge-m3</li><li>RAGAS</li></ul>
+          </div>
+        </a>
         <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/MachineLearning-Projects/tree/main/Supervised%20Learning/Classification/Video%20Describer%20-%20Image%20Detection%20YOLO">
-          <div class="thumb"><img src="public/video_describer.png" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/video_describer.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Video Describer</h3>
             <p data-en="Runs a video frame by frame through a YOLO detector and writes a new video with boxes, labels and confidence for every detection. It also logs the object coordinates for each frame.">Przepuszcza film klatka po klatce przez detektor YOLO i zapisuje nowe wideo z ramkami, etykietami i pewnością każdego wykrycia. Dla każdej klatki wypisuje też współrzędne znalezionych obiektów.</p>
@@ -160,7 +172,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="ml" href="https://github.com/juliuszlosinski/MachineLearning-Projects">
-          <div class="thumb"><img src="public/ml_projects.png" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/ml_projects.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Machine Learning Projects</h3>
             <p data-en="A tour of machine learning in Jupyter notebooks: from NumPy and SciPy through supervised and unsupervised learning to neural networks in Keras and TensorFlow, NLP and reinforcement learning, ending with complete applications.">Przegląd uczenia maszynowego w notatnikach Jupyter: od NumPy i SciPy, przez uczenie nadzorowane i nienadzorowane, po sieci neuronowe w Keras i TensorFlow, NLP i uczenie ze wzmocnieniem. Na końcu gotowe aplikacje.</p>
@@ -176,7 +188,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="llm" href="https://github.com/juliuszlosinski/Dok-chat-miner/tree/master/evaluator">
-          <div class="thumb"><img src="public/summary_evaluation.png" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/summary_evaluation.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3 data-en="Summary evaluator">Ocena streszczeń</h3>
             <p data-en="A model that scores a summary without a reference summary: the article and summary are encoded with BERT, and a neural network trained on human ratings of 2,500 summaries (CNN/DailyMail) returns a quality score. Part of Dok-chat-miner, which clusters and summarises articles from cisa.gov.">Model, który ocenia streszczenie bez streszczenia wzorcowego: artykuł i streszczenie są kodowane BERT-em, a sieć neuronowa wyuczona na ludzkich ocenach 2 500 streszczeń (CNN/DailyMail) zwraca wynik jakości. Część projektu Dok-chat-miner, który grupuje i streszcza artykuły z cisa.gov.</p>
@@ -184,7 +196,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/drawventure">
-          <div class="thumb contain"><img src="public/drawventure.png" alt="" loading="lazy"></div>
+          <div class="thumb contain"><img src="public/drawventure.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Drawventure</h3>
             <p data-en="A team-built drawing game for kids: draw the given shape as fast and as precisely as you can. I built the AI backend: a CNN recognises shapes and digits, and a Flask API scores every drawing.">Zespołowa gra dla dzieci, w której trzeba jak najszybciej i najdokładniej narysować zadany kształt. Odpowiadałem za backend AI: sieć CNN rozpoznaje figury i cyfry, a API we Flasku ocenia każdy rysunek.</p>
@@ -192,7 +204,7 @@
           </div>
         </a>
         <a class="card project feature reveal" data-cat="gfx" href="https://github.com/juliuszlosinski/GameEngine_RealX">
-          <div class="thumb"><img src="public/realx_engine.png" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/realx_engine.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3>RealX Engine</h3>
             <p data-en="A 3D game engine with a scene editor, built for my bachelor&#x27;s thesis. OpenGL rendering, PhysX physics and collisions, irrKlang audio and an ImGui editor interface, all written in C++.">Silnik gier 3D z edytorem sceny, zbudowany w ramach pracy inżynierskiej. Renderowanie w OpenGL, fizyka i kolizje w PhysX, dźwięk w irrKlang, a interfejs edytora w ImGui. Całość napisana w C++.</p>
@@ -200,7 +212,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="gfx" href="https://github.com/juliuszlosinski/HectorX-GameEngine-Cpp_OpenGL_PhysX">
-          <div class="thumb"><img src="public/hector_x.png" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/hector_x.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3>HectorX Engine</h3>
             <p data-en="A game engine on modern OpenGL (GLFW, GLEW, GLM) with custom GLSL shaders and PhysX physics and collision simulation.">Silnik gier na nowoczesnym OpenGL (GLFW, GLEW, GLM) z własnymi shaderami GLSL oraz symulacją fizyki i kolizji w PhysX.</p>
@@ -208,19 +220,11 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="other" href="https://github.com/juliuszlosinski/Game_Bobi_LibGDX_Android">
-          <div class="thumb contain"><img src="public/bobi.png" alt="" loading="lazy"></div>
+          <div class="thumb contain"><img src="public/bobi.webp" alt="" loading="lazy"></div>
           <div class="body">
             <h3 data-en="Bobi: Android game">Bobi: gra na Androida</h3>
             <p data-en="A 2D platformer for Android built with LibGDX. The repository includes an installable build and gameplay recordings.">Gra platformowa 2D na Androida napisana w LibGDX. W repozytorium jest gotowa aplikacja do zainstalowania i nagrania z rozgrywki.</p>
             <ul class="tags"><li>Android</li><li>LibGDX</li><li data-en="2D game">Gra 2D</li></ul>
-          </div>
-        </a>
-        <a class="card project reveal" data-cat="other" href="https://github.com/juliuszlosinski/Courses_Certificates">
-          <div class="thumb"><img src="public/courses.png" alt="" loading="lazy"></div>
-          <div class="body">
-            <h3 data-en="Courses and certificates">Kursy i certyfikaty</h3>
-            <p data-en="Certificates from completed online courses and specialisations, mostly on Coursera, including C and C++ programming.">Certyfikaty z ukończonych kursów i specjalizacji online, głównie z Coursery, m.in. z programowania w C i C++.</p>
-            <ul class="tags"><li>Coursera</li><li>C</li><li>C++</li></ul>
           </div>
         </a>
       </div>
@@ -289,6 +293,82 @@
         </li>
       </ol>
       <p class="pubs-note reveal" data-en="Also abstract papers at PP-RAI 2024 and PP-RAI 2025, the Polish Conference on Artificial Intelligence.">Do tego streszczenia na konferencjach PP-RAI 2024 i PP-RAI 2025 (Polska Konferencja Sztucznej Inteligencji).</p>
+    </div>
+  </section>
+
+  <section id="umiejetnosci">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Skills">// Umiejętności</div>
+        <h2 data-en="Tools I work with">Narzędzia, z którymi pracuję</h2>
+      </div>
+      <div class="skills">
+        <article class="card skill reveal">
+          <h3 data-en="LLMs and AI agents">LLM i agenci AI</h3>
+          <ul class="tags"><li>LangGraph</li><li>RAG</li><li>Ollama</li><li>Qwen 2.5</li><li>LLM-as-judge</li><li>RAGAS</li><li>Hugging Face Transformers</li><li>vLLM</li><li>Pydantic</li><li>Streamlit</li></ul>
+        </article>
+        <article class="card skill reveal">
+          <h3>Computer Vision</h3>
+          <ul class="tags"><li data-en="Object detection">Detekcja obiektów</li><li>YOLOv8-v11</li><li>Ultralytics</li><li data-en="CNN architectures">Architektury CNN</li><li data-en="Image classification">Klasyfikacja obrazów</li><li data-en="Imbalanced data">Niezbalansowane dane</li><li>OpenCV</li></ul>
+        </article>
+        <article class="card skill reveal">
+          <h3 data-en="Machine learning">Uczenie maszynowe</h3>
+          <ul class="tags"><li>PyTorch</li><li>TensorFlow 2</li><li>Keras</li><li>scikit-learn</li><li>NumPy</li><li>Pandas</li><li>NLP</li><li data-en="Anomaly detection">Wykrywanie anomalii</li></ul>
+        </article>
+        <article class="card skill reveal">
+          <h3 data-en="GPU and inference">GPU i inferencja</h3>
+          <ul class="tags"><li>CUDA</li><li>TensorRT</li><li>ONNX</li><li>vLLM</li><li>OpenGL</li><li>DirectX</li><li>Direct3D 12</li></ul>
+        </article>
+        <article class="card skill reveal">
+          <h3 data-en="Infrastructure and tools">Infrastruktura i narzędzia</h3>
+          <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>Proxmox</li><li>Linux</li><li>Microsoft Azure</li><li>Git</li><li>PostgreSQL</li><li>MS SQL</li></ul>
+        </article>
+        <article class="card skill reveal">
+          <h3 data-en="Programming languages">Języki programowania</h3>
+          <ul class="tags"><li>Python</li><li>C/C++</li><li>SQL</li><li>Java</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kursy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="// Courses">// Kursy</div>
+        <h2 data-en="Courses and certificates">Kursy i certyfikaty</h2>
+        <p data-en="Completed online courses and specialisations. Each title opens its certificate.">Ukończone kursy i specjalizacje online. Każdy tytuł otwiera certyfikat.</p>
+      </div>
+      <div class="courses">
+        <article class="card course reveal">
+          <h3 data-en="AI and machine learning">AI i uczenie maszynowe</h3>
+          <ul class="course-list">
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Mathematical-Foundations-Of-Machine-Learning-Course.pdf">Mathematical Foundations of Machine Learning</a><span class="when">10.2024</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/NLP_course.pdf">Modern Natural Language Processing in Python</a><span class="when">10.2024</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Deep_Learning_course.pdf">Deep Learning A-Z 2024: Neural Networks, AI &amp; ChatGPT Prize</a><span class="when">10.2024</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Machine_Learning_course.pdf">Machine Learning A-Z: AI, Python &amp; R + ChatGPT Prize</a><span class="when">10.2024</span></li>
+          </ul>
+        </article>
+        <article class="card course reveal">
+          <h3 data-en="Computer graphics">Grafika komputerowa</h3>
+          <ul class="course-list">
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/dx11_course.pdf">DirectX 11 Programming</a><span class="when">10.2024</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Computer_Graphics_With_Modern_OpenGL_And_Cpp-Juliusz_Losinski.pdf">Computer Graphics with Modern OpenGL and C++</a><span class="when">09.2021</span></li>
+          </ul>
+        </article>
+        <article class="card course reveal">
+          <h3 data-en="Programming and networking">Programowanie i sieci</h3>
+          <ul class="course-list">
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/CCNAv7-Wprowadzenie_do_sieci-Juliusz_Losinski.pdf">CCNAv7: Introduction to Networks</a><span class="when">06.2021</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/C%2B%2B%20For%20C%20Programmers%2C%20Part%20A-Juliusz%20Los.pdf">C++ for C Programmers, Part A</a><span class="when">02.2021</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/C_For_Everyone_Structured_Programming-Juliusz_L.pdf">C for Everyone: Structured Programming</a><span class="when">02.2021</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/C_For_Everyone_Programming_Fundamentals-Juliusz_Los.pdf">C for Everyone: Programming Fundamentals</a><span class="when">02.2021</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/More%20C%23%20Programming%20and%20Unity-%20Juliusz%20Los.pdf">More C# Programming and Unity</a><span class="when">08.2020</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Introduction%20to%20C%23%20Programming%20and%20Unity-%20Juliusz%20Los.pdf">Introduction to C# Programming and Unity</a><span class="when">08.2020</span></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Intermediate%20Object-Oriented%20Programming%20for%20Unity%20Games-Juliusz%20Los.pdf">Intermediate Object-Oriented Programming for Unity Games</a></li>
+            <li><a href="https://github.com/juliuszlosinski/Courses_Certificates/blob/main/Build%20a%20Modern%20Computer%20from%20First%20Principles_%20From%20Nand%20to%20Tetris%20%28Project-Centered%20Course%29-%20Juliusz%20Los.pdf">Build a Modern Computer from First Principles: From Nand to Tetris</a><span class="when">04.2020</span></li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -439,7 +519,11 @@
         <h2 data-en="Let's talk about AI">Porozmawiajmy o AI</h2>
         <p data-en="Open to projects and roles around computer vision, language models and AI agents.">Jestem otwarty na projekty i role związane z computer vision, modelami językowymi i agentami AI.</p>
         <div class="cta">
-          <a class="btn primary" href="https://www.linkedin.com/in/juliuszlosinski">LinkedIn</a>
+          <a class="btn primary" href="mailto:juliuszlosinski@wp.pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            juliuszlosinski@wp.pl</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/juliuszlosinski">LinkedIn</a>
+          <a class="btn ghost" href="public/Juliusz_Losinski_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            <span data-en="Download CV">Pobierz CV</span></a>
           <a class="btn ghost" href="https://github.com/juliuszlosinski">GitHub</a>
           <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
         </div>
@@ -455,6 +539,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=4"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>
