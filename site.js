@@ -57,8 +57,8 @@
   /* ---------- language: Polish in the markup, English in data-en ---------- */
   const META = {
     pl: { title: document.title, desc: document.querySelector('meta[name="description"]').content },
-    en: { title: "Juliusz Łosiński · AI Engineer, Computer Vision",
-          desc: "Juliusz Łosiński: AI engineer and computer vision researcher at Gdynia Maritime University. Object detection, YOLO, language models and AI agents." }
+    en: { title: "Juliusz Łosiński · Agentic AI Engineer, Computer Vision",
+          desc: "Juliusz Łosiński: AI engineer deploying AI agents (Generative AI, Agentic AI) and computer vision researcher at Gdynia Maritime University. ATLAS project." }
   };
   const langBtn = document.getElementById("lang");
   function setLang(lang) {

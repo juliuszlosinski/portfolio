@@ -95,7 +95,7 @@ p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .btn.ghost:hover { background: rgba(59, 130, 246, .16); }
 .btn svg { width: 18px; height: 18px; }
 
-.portrait { position: relative; justify-self: center; width: min(100%, 360px); margin: 0; }
+.portrait { position: relative; justify-self: center; align-self: start; width: min(100%, 360px); margin: 40px 0 0; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px; border: 1px solid var(--line-strong); box-shadow: 0 40px 90px rgba(0, 0, 0, .55); }
 .portrait::before {
   content: ""; position: absolute; inset: -14px; border-radius: 36px; z-index: -1;
@@ -195,7 +195,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 @media (max-width: 820px) {
   .hero { padding: 120px 0 64px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
-  .portrait { width: min(80%, 300px); }
+  .portrait { width: min(80%, 300px); margin-top: 0; }
   .badge { left: auto; right: -12px; }
   .menu-btn { display: block; }
   .nav ul {
