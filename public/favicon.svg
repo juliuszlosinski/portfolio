@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Juliusz Łosiński: agent AI</title>
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="#081733"/>
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <path d="M32 15 V20" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="13.5" r="3.4" fill="#22D3EE"/>
+  <rect x="17" y="20" width="30" height="24" rx="8" fill="url(#g)"/>
+  <circle cx="25.5" cy="32" r="3.4" fill="#081733"/>
+  <circle cx="38.5" cy="32" r="3.4" fill="#081733"/>
+</svg>

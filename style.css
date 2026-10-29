@@ -65,6 +65,7 @@ p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .nav.scrolled { border-bottom-color: var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 600 15px var(--font-display); }
+.brand img { width: 34px; height: 34px; flex: none; }
 .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .nav ul a { display: block; padding: 7px 12px; border-radius: 8px; color: var(--muted); text-decoration: none; font-size: 14.5px; transition: color .2s, background .2s; }
 .nav ul a:hover, .nav ul a.active { color: var(--text); background: rgba(59, 130, 246, .14); }
