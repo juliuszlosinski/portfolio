@@ -237,6 +237,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 .skill { padding: 24px; display: grid; gap: 14px; align-content: start; }
 .skill h3 { font-size: 17px; }
 .skill .tags li { font-size: 12px; padding: 4px 9px; }
+.skill .tags li { display: inline-flex; align-items: center; gap: 6px; }
+.skill .ico { width: 14px; height: 14px; flex: none; }
 @media (max-width: 980px) { .skills { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .skills { grid-template-columns: 1fr; } }
 
@@ -294,6 +296,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 .timeline .points { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 4px; color: var(--muted); font-size: 14.5px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .timeline .points li::marker { color: var(--cyan); }
 .timeline .tags { margin-top: 10px; }
+.timeline > li.has-logo { padding-right: 60px; min-height: 48px; }
+.timeline .org-logo { position: absolute; top: 0; right: 0; width: 44px; height: 44px; object-fit: contain; padding: 5px; border-radius: 10px; background: #fff; }
 
 @media (max-width: 980px) {
   .research-hero { grid-template-columns: 1fr; }
