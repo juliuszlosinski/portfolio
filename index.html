@@ -10,18 +10,40 @@
   <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
   <link rel="canonical" href="https://juliuszlosinski.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Juliusz Łosiński · Agentic AI Engineer, Computer Vision">
+  <meta property="og:title" content="Juliusz Łosiński Agentic AI Engineer, Computer Vision">
   <meta property="og:description" content="Computer vision, modele językowe, RAG i agenci AI. Projekty, badania i ATLAS.">
   <meta property="og:url" content="https://juliuszlosinski.com/">
   <meta property="og:image" content="https://juliuszlosinski.com/public/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="preload" href="public/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/sora-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/ibm-plex-sans-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=22">
   <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juliusz Łosiński",
+    "url": "https://juliuszlosinski.com/",
+    "image": "https://juliuszlosinski.com/public/portrait.jpg",
+    "jobTitle": "Agentic AI Engineer",
+    "description": "AI engineer deploying AI agents (Generative AI, Agentic AI) and computer vision researcher.",
+    "email": "mailto:juliuszlosinski@wp.pl",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Gdynia Maritime University", "url": "https://umg.edu.pl/" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Gdynia Maritime University" },
+    "knowsAbout": ["Agentic AI", "Generative AI", "Large language models", "Retrieval-augmented generation", "LangGraph", "Computer vision", "Object detection", "YOLO", "PyTorch"],
+    "sameAs": [
+      "https://www.linkedin.com/in/juliuszlosinski",
+      "https://github.com/juliuszlosinski",
+      "https://atlas.juliuszlosinski.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -40,7 +62,7 @@
       </ul>
     </nav>
     <div class="nav-tools">
-      <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+      <button class="lang" id="lang" type="button" aria-label="EN: switch to English">EN</button>
       <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span></button>
     </div>
   </div>
@@ -64,14 +86,14 @@
           <a class="btn ghost" href="public/Juliusz_Losinski_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
             <span data-en="Download CV">Pobierz CV</span></a>
           <a class="btn ghost" href="#badania" data-en="Research">Badania</a>
-          <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
+          <a class="btn ghost" href="https://atlas.juliuszlosinski.com/">ATLAS</a>
           <a class="btn ghost" href="https://github.com/juliuszlosinski">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
             GitHub</a>
         </div>
       </div>
       <figure class="portrait">
-        <img src="public/portrait.jpg?v=2" alt="Juliusz Łosiński podczas wystąpienia na konferencji IEEE" width="800" height="800">
+        <img src="public/portrait-720.webp" srcset="public/portrait-400.webp 400w, public/portrait-720.webp 720w" sizes="(max-width: 820px) 300px, 360px" fetchpriority="high" alt="Juliusz Łosiński podczas wystąpienia na konferencji IEEE" width="800" height="800">
         <figcaption class="badge"><span class="dot"></span><span><b data-en="Now building">Teraz buduję</b><span data-en="ATLAS Scholar: agentic RAG">ATLAS Scholar: agentowy RAG</span></span></figcaption>
       </figure>
     </div>
@@ -123,8 +145,8 @@
             <li><b>+</b><span data-en="next projects on the way">kolejne projekty w drodze</span></li>
           </ul>
           <div class="cta">
-            <a class="btn primary" href="https://juliuszlosinski.github.io/ATLAS/" data-en="Open ATLAS">Otwórz ATLAS</a>
-            <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/mapa.html" data-en="Project map">Mapa projektów</a>
+            <a class="btn primary" href="https://atlas.juliuszlosinski.com/" data-en="Open ATLAS">Otwórz ATLAS</a>
+            <a class="btn ghost" href="https://atlas.juliuszlosinski.com/mapa.html" data-en="Project map">Mapa projektów</a>
           </div>
         </div>
       </div>
@@ -147,15 +169,15 @@
         <button type="button" data-filter="other" aria-pressed="false" data-en="Other">Inne</button>
       </div>
       <div class="projects" id="projects">
-        <a class="card project reveal" data-cat="llm" href="https://juliuszlosinski.github.io/ATLAS/flashcards.html">
-          <div class="thumb dark"><img src="public/atlas_flashcards.webp" alt="" loading="lazy"></div>
+        <a class="card project reveal" data-cat="llm" href="https://atlas.juliuszlosinski.com/flashcards.html">
+          <div class="thumb dark"><img src="public/atlas_flashcards.webp" srcset="public/atlas_flashcards-480.webp 480w, public/atlas_flashcards.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3>ATLAS: Flashcards</h3>
             <p data-en="Turns notes, PDFs and Word documents into flashcards with a local Qwen 2.5 model served by Ollama. The same model scores every card (LLM-as-judge), and the Explain button answers from passages of your own material (RAG). Finished decks export to Anki.">Zamienia notatki, PDF-y i dokumenty Word w fiszki do nauki, generowane lokalnym modelem Qwen 2.5 przez Ollamę. Ten sam model ocenia każdą fiszkę (LLM-as-judge), a przycisk Wyjaśnij tłumaczy ją na podstawie fragmentów materiału (RAG). Gotowe talie trafiają do Anki.</p>
             <ul class="tags"><li>LLM</li><li>RAG</li><li>Ollama</li><li>Pydantic</li><li>Streamlit</li></ul>
           </div>
         </a>
-        <a class="card project reveal" data-cat="llm" href="https://juliuszlosinski.github.io/ATLAS/mapa.html">
+        <a class="card project reveal" data-cat="llm" href="https://atlas.juliuszlosinski.com/mapa.html">
           <div class="thumb contain"><img src="public/atlas_scholar_graph.svg" alt="" loading="lazy"></div>
           <div class="body">
             <span class="status" data-en="In progress">W trakcie</span>
@@ -165,7 +187,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/MachineLearning-Projects/tree/main/Supervised%20Learning/Classification/Video%20Describer%20-%20Image%20Detection%20YOLO">
-          <div class="thumb"><img src="public/video_describer.webp" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/video_describer.webp" srcset="public/video_describer-480.webp 480w, public/video_describer.webp 679w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Video Describer</h3>
             <p data-en="Runs a video frame by frame through a YOLO detector and writes a new video with boxes, labels and confidence for every detection. It also logs the object coordinates for each frame.">Przepuszcza film klatka po klatce przez detektor YOLO i zapisuje nowe wideo z ramkami, etykietami i pewnością każdego wykrycia. Dla każdej klatki wypisuje też współrzędne znalezionych obiektów.</p>
@@ -173,7 +195,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="ml" href="https://github.com/juliuszlosinski/MachineLearning-Projects">
-          <div class="thumb"><img src="public/ml_projects.webp" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/ml_projects.webp" srcset="public/ml_projects-480.webp 480w, public/ml_projects.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Machine Learning Projects</h3>
             <p data-en="A tour of machine learning in Jupyter notebooks: from NumPy and SciPy through supervised and unsupervised learning to neural networks in Keras and TensorFlow, NLP and reinforcement learning, ending with complete applications.">Przegląd uczenia maszynowego w notatnikach Jupyter: od NumPy i SciPy, przez uczenie nadzorowane i nienadzorowane, po sieci neuronowe w Keras i TensorFlow, NLP i uczenie ze wzmocnieniem. Na końcu gotowe aplikacje.</p>
@@ -189,7 +211,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="llm" href="https://github.com/juliuszlosinski/Dok-chat-miner/tree/master/evaluator">
-          <div class="thumb"><img src="public/summary_evaluation.webp" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/summary_evaluation.webp" srcset="public/summary_evaluation-480.webp 480w, public/summary_evaluation.webp 835w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3 data-en="Summary evaluator">Ocena streszczeń</h3>
             <p data-en="A model that scores a summary without a reference summary: the article and summary are encoded with BERT, and a neural network trained on human ratings of 2,500 summaries (CNN/DailyMail) returns a quality score. Part of Dok-chat-miner, which clusters and summarises articles from cisa.gov.">Model, który ocenia streszczenie bez streszczenia wzorcowego: artykuł i streszczenie są kodowane BERT-em, a sieć neuronowa wyuczona na ludzkich ocenach 2 500 streszczeń (CNN/DailyMail) zwraca wynik jakości. Część projektu Dok-chat-miner, który grupuje i streszcza artykuły z cisa.gov.</p>
@@ -197,7 +219,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="cv" href="https://github.com/juliuszlosinski/drawventure">
-          <div class="thumb contain"><img src="public/drawventure.webp" alt="" loading="lazy"></div>
+          <div class="thumb contain"><img src="public/drawventure.webp" srcset="public/drawventure-480.webp 480w, public/drawventure.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3>Drawventure</h3>
             <p data-en="A team-built drawing game for kids: draw the given shape as fast and as precisely as you can. I built the AI backend: a CNN recognises shapes and digits, and a Flask API scores every drawing.">Zespołowa gra dla dzieci, w której trzeba jak najszybciej i najdokładniej narysować zadany kształt. Odpowiadałem za backend AI: sieć CNN rozpoznaje figury i cyfry, a API we Flasku ocenia każdy rysunek.</p>
@@ -205,7 +227,7 @@
           </div>
         </a>
         <a class="card project feature reveal" data-cat="gfx" href="https://github.com/juliuszlosinski/GameEngine_RealX">
-          <div class="thumb"><img src="public/realx_engine.webp" alt="" loading="lazy"></div>
+          <div class="thumb"><img src="public/realx_engine.webp" srcset="public/realx_engine-480.webp 480w, public/realx_engine.webp 1400w" sizes="(max-width: 820px) 100vw, 760px" alt="" loading="lazy"></div>
           <div class="body">
             <h3>RealX Engine</h3>
             <p data-en="A 3D game engine with a scene editor, built for my bachelor&#x27;s thesis. OpenGL rendering, PhysX physics and collisions, irrKlang audio and an ImGui editor interface, all written in C++.">Silnik gier 3D z edytorem sceny, zbudowany w ramach pracy inżynierskiej. Renderowanie w OpenGL, fizyka i kolizje w PhysX, dźwięk w irrKlang, a interfejs edytora w ImGui. Całość napisana w C++.</p>
@@ -221,7 +243,7 @@
           </div>
         </a>
         <a class="card project reveal" data-cat="other" href="https://github.com/juliuszlosinski/Game_Bobi_LibGDX_Android">
-          <div class="thumb contain"><img src="public/bobi.webp" alt="" loading="lazy"></div>
+          <div class="thumb contain"><img src="public/bobi.webp" srcset="public/bobi-480.webp 480w, public/bobi.webp 599w" sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy"></div>
           <div class="body">
             <h3 data-en="Bobi: Android game">Bobi: gra na Androida</h3>
             <p data-en="A 2D platformer for Android built with LibGDX. The repository includes an installable build and gameplay recordings.">Gra platformowa 2D na Androida napisana w LibGDX. W repozytorium jest gotowa aplikacja do zainstalowania i nagrania z rozgrywki.</p>
@@ -538,7 +560,7 @@
           <a class="btn ghost" href="public/Juliusz_Losinski_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
             <span data-en="Download CV">Pobierz CV</span></a>
           <a class="btn ghost" href="https://github.com/juliuszlosinski">GitHub</a>
-          <a class="btn ghost" href="https://juliuszlosinski.github.io/ATLAS/">ATLAS</a>
+          <a class="btn ghost" href="https://atlas.juliuszlosinski.com/">ATLAS</a>
         </div>
       </div>
     </div>
@@ -552,6 +574,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=7"></script>
+<script src="site.js?v=9"></script>
 </body>
 </html>

@@ -57,7 +57,7 @@
   /* ---------- language: Polish in the markup, English in data-en ---------- */
   const META = {
     pl: { title: document.title, desc: document.querySelector('meta[name="description"]').content },
-    en: { title: "Juliusz Łosiński · Agentic AI Engineer, Computer Vision",
+    en: { title: "Juliusz Łosiński Agentic AI Engineer, Computer Vision",
           desc: "Juliusz Łosiński: AI engineer deploying AI agents (Generative AI, Agentic AI) and computer vision researcher at Gdynia Maritime University. ATLAS project." }
   };
   const langBtn = document.getElementById("lang");
@@ -74,7 +74,7 @@
     document.title = META[lang].title;
     document.querySelector('meta[name="description"]').content = META[lang].desc;
     langBtn.textContent = lang === "en" ? "PL" : "EN";
-    langBtn.setAttribute("aria-label", lang === "en" ? "Przełącz na polski" : "Switch to English");
+    langBtn.setAttribute("aria-label", lang === "en" ? "PL: przełącz na polski" : "EN: switch to English");
     try { localStorage.setItem("lang", lang); } catch (e) {}
   }
   langBtn.addEventListener("click", () => setLang(document.documentElement.lang === "en" ? "pl" : "en"));
